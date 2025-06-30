@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import Google Fonts - Load distinct, visually different fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Merriweather:wght@300;400;700&family=Montserrat:wght@300;400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&family=Lora:wght@400;500;600;700&family=Nunito:wght@300;400;500;600;700&display=swap');
+
+/* Font family utility classes for immediate application */
+.font-inter { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important; }
+.font-roboto { font-family: 'Roboto', Arial, sans-serif !important; }
+.font-open-sans { font-family: 'Open Sans', Helvetica, sans-serif !important; }
+.font-poppins { font-family: 'Poppins', system-ui, sans-serif !important; }
+.font-playfair { font-family: 'Playfair Display', Georgia, serif !important; }
+.font-merriweather { font-family: 'Merriweather', 'Times New Roman', serif !important; }
+.font-montserrat { font-family: 'Montserrat', Verdana, sans-serif !important; }
+.font-source-sans { font-family: 'Source Sans Pro', Tahoma, sans-serif !important; }
+.font-lora { font-family: 'Lora', 'Book Antiqua', serif !important; }
+.font-nunito { font-family: 'Nunito', 'Trebuchet MS', sans-serif !important; }
+
+/* Ensure fonts are applied globally when set */
+.apply-font-inter * { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important; }
+.apply-font-roboto * { font-family: 'Roboto', Arial, sans-serif !important; }
+.apply-font-open-sans * { font-family: 'Open Sans', Helvetica, sans-serif !important; }
+.apply-font-poppins * { font-family: 'Poppins', system-ui, sans-serif !important; }
+.apply-font-playfair * { font-family: 'Playfair Display', Georgia, serif !important; }
+.apply-font-merriweather * { font-family: 'Merriweather', 'Times New Roman', serif !important; }
+.apply-font-montserrat * { font-family: 'Montserrat', Verdana, sans-serif !important; }
+.apply-font-source-sans * { font-family: 'Source Sans Pro', Tahoma, sans-serif !important; }
+.apply-font-lora * { font-family: 'Lora', 'Book Antiqua', serif !important; }
+.apply-font-nunito * { font-family: 'Nunito', 'Trebuchet MS', sans-serif !important; }
+
+/* Custom animations for form themes */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.6s ease-out;
+}
+
+.animate-bounce-in {
+  animation: bounce-in 0.8s ease-out;
+}
+
+/* Line clamp utilities */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Force font loading */
+body {
+  font-display: swap;
+}
+
+/* Preload critical fonts */
+@font-face {
+  font-family: 'Inter';
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJfecg.woff2') format('woff2');
+}
